@@ -1,0 +1,31 @@
+ 
+.gallery-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px;
+}
+
+ 
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0f19;  
+  color: #ffffff;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 2px solid #0b0f19;
+  border-radius: 0;           
+  cursor: pointer;
+  white-space: nowrap;         
+  outline: none;
+}
+
+ 
+.cart-badge {
+  color: #00ff66;
+  margin-left: 4px;
+}

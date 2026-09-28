@@ -1,0 +1,23 @@
+<div class="art-card">
+  <div>
+    <div class="art-frame">
+      <img [src]="item().image" [alt]="item().title" />
+    </div>
+ 
+
+    <span class="art-tag">ORIGEM // {{ item().category }}</span>
+    <h3 class="art-title" [title]="item().title">{{ item().title }}</h3>
+    <p class="art-artist">{{ item().description }}</p>
+  </div>
+
+  <div class="art-footer">
+    <div>
+      <span class="art-price-label">AVALIAÇÃO</span>
+      <p class="art-price">${{ item().price }}k</p>
+    </div>
+
+    <button (click)="select.emit(item())" class="btn-acquire">
+      Adquirir
+    </button>
+  </div>
+</div>

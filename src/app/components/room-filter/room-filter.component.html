@@ -1,0 +1,19 @@
+<div class="flex flex-col sm:flex-row gap-3 mb-6 bg-gray-200 p-4 rounded-md border border-gray-300">
+  <input 
+    type="text" 
+    [ngModel]="searchTerm()"
+    (ngModelChange)="onSearchChange($event)"
+    placeholder="Buscar elemento no espaço..." 
+    class="flex-1 px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
+  />
+  <select 
+    (change)="onCategoryChange($event)"
+    class="px-4 py-2 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
+  >
+    <option value="">Todas as Categorias</option>
+    <option value="electronics">Eletrônicos</option>
+    <option value="jewelery">Jóias</option>
+    <option value="men's clothing">Roupas Masculinas</option>
+    <option value="women's clothing">Roupas Femininas</option>
+  </select>
+</div>

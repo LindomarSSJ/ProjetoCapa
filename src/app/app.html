@@ -1,0 +1,29 @@
+<header class="gallery-header">
+  <div class="header-container">
+    
+    <div class="brand">
+      <div class="brand-accent"></div>
+      <div>
+        <h1 class="brand-title">SHIFTROOM</h1>
+        <p class="brand-subtitle">GALERIA DE ARTE CONCEITUAL & INSTALAÇÕES</p>
+      </div>
+    </div>
+
+<nav class="gallery-nav">
+  <a routerLink="/home" routerLinkActive="active" class="nav-btn">[ Sala 0 | Início ]</a>
+  <a routerLink="/explorar" routerLinkActive="active" class="nav-btn">[ Sala 1 | Explorar a Galeria ]</a>
+  <a routerLink="/contato" routerLinkActive="active" class="nav-btn">[ Sala 2 | Entre em Contato ]</a>
+  <a routerLink="/sobre" routerLinkActive="active" class="nav-btn">[ Sala 3 | Sobre ]</a>
+
+ 
+  <button class="cart-btn">
+    🛒 [ CARRINHO: <span class="cart-badge">{{ cartService.cartCount() }}</span> ]
+  </button>
+</nav>
+
+  </div>
+</header>
+
+<main class="main-content">
+  <router-outlet />
+</main>

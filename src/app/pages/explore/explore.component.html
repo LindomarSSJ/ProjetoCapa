@@ -1,0 +1,22 @@
+<div class="gallery-container">
+  <div class="gallery-intro">
+    <h2>ACERVO DE ARTES & INSTALAÇÕES</h2>
+    <p>Curadoria exclusiva de pinturas clássicas, quadros e esculturas contemporâneas.</p>
+  </div>
+
+  @if (roomService.loading()) {
+    <div class="loading-box">Carregando acervo do museu...</div>
+  }
+
+  @if (roomService.error()) {
+    <div class="error-box">{{ roomService.error() }}</div>
+  }
+
+  <div class="gallery-grid">
+    @for (item of roomService.items(); track item.id) {
+      <app-room-card 
+        [item]="item" 
+        (select)="onSelect($event)" />
+    }
+  </div>
+</div>

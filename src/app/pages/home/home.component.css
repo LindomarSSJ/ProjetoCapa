@@ -1,0 +1,66 @@
+.home-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.hero-card {
+  background: #ffffff;
+  border: 3px solid #0d131f;
+  box-shadow: 8px 8px 0px #0d131f;
+  padding: 3rem 2rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: #0d131f;
+  color: #fff;
+  padding: 0.2rem 0.6rem;
+  display: inline-block;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #0d131f;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #556070;
+  margin-bottom: 2rem;
+}
+
+.action-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1rem 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid #0d131f;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.btn-primary {
+  background: #0d131f;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #0d131f;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  box-shadow: 4px 4px 0px #0d131f;
+  transform: translate(-2px, -2px);
+}
