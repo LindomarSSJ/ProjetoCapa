@@ -1,19 +1,9 @@
-<div class="flex flex-col sm:flex-row gap-3 mb-6 bg-gray-200 p-4 rounded-md border border-gray-300">
-  <input 
-    type="text" 
+<div class="w-full mt-2 mb-8 block clear-both">
+  <input
+    type="text"
     [ngModel]="searchTerm()"
     (ngModelChange)="onSearchChange($event)"
-    placeholder="Buscar elemento no espaço..." 
-    class="flex-1 px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
+    placeholder="Pesquisar por obra ou autor..."
+    class="w-full p-3 text-sm font-bold uppercase tracking-wider text-black bg-white border-2 border-black shadow-md focus:outline-none focus:bg-gray-50 transition-all placeholder:text-gray-400 placeholder:normal-case"
   />
-  <select 
-    (change)="onCategoryChange($event)"
-    class="px-4 py-2 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all"
-  >
-    <option value="">Todas as Categorias</option>
-    <option value="electronics">Eletrônicos</option>
-    <option value="jewelery">Jóias</option>
-    <option value="men's clothing">Roupas Masculinas</option>
-    <option value="women's clothing">Roupas Femininas</option>
-  </select>
 </div>

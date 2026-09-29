@@ -4,6 +4,9 @@
     <p>Curadoria exclusiva de pinturas clássicas, quadros e esculturas contemporâneas.</p>
   </div>
 
+ 
+  <app-room-filter (filterChange)="onFilter($event)" />
+
   @if (roomService.loading()) {
     <div class="loading-box">Carregando acervo do museu...</div>
   }
@@ -13,9 +16,10 @@
   }
 
   <div class="gallery-grid">
-    @for (item of roomService.items(); track item.id) {
-      <app-room-card 
-        [item]="item" 
+   
+    @for (item of filteredItems(); track item.id) {
+      <app-room-card
+        [item]="item"
         (select)="onSelect($event)" />
     }
   </div>

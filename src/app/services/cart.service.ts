@@ -5,9 +5,7 @@ import { Injectable, signal } from '@angular/core';
 })
 export class CartService {
   
-  private items = signal<any[]>([]);
-
-   
+  private items = signal<any[]>([]);     
   cartCount = signal<number>(0);
 
   

@@ -10,25 +10,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class RoomFilterComponent {
   searchTerm = signal<string>('');
-  filterChange = output<{ search: string; category: string }>();
+  filterChange = output<string>();
 
-  private category = signal<string>('');
-
-  onSearchChange(text: string) {
-    this.searchTerm.set(text);
-    this.emitFilter();
-  }
-
-  onCategoryChange(event: Event) {
-    const val = (event.target as HTMLSelectElement).value;
-    this.category.set(val);
-    this.emitFilter();
-  }
-
-  private emitFilter() {
-    this.filterChange.emit({
-      search: this.searchTerm(),
-      category: this.category()
-    });
+  onSearchChange(value: string) {
+    this.searchTerm.set(value);
+    this.filterChange.emit(value);
   }
 }
